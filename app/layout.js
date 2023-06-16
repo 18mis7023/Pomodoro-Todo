@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { Auth0Provider } from "auth0-spa-js";
+// import { Auth0Provider } from "auth0-spa-js";
 
 // import Login from './login/page'
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Auth0Provider
+        {/* <Auth0Provider
           domain="dev-hemanthchowdary.us.auth0.com"
           clientID="V2Vw3iF1Qr4mdm4PdYGYLvMTCOEy2J6W"
           audience="Yd2oQ9kSpUgZvc8kYwjlob5ZHAdI3okAsUmwjcrr7FLayiTp-tmbQu8VykxLKGU0" 
@@ -24,7 +24,8 @@ export default function RootLayout({ children }) {
           }}      
         >
         {children}
-        </Auth0Provider>
+        </Auth0Provider> */}
+        {children}
           {/* <Login /> */}
       </body>
     </html>

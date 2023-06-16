@@ -5,11 +5,12 @@ import styles from './page.module.css'
 // import { createRoot } from 'react-dom/client';
 // import { Auth0Provider } from '@auth0/auth0-react';
 
+import { Grommet } from 'grommet';
 
 export default function Home() {
   return (
     <main>
-        <h1 className={styles.heading}>Promoda Todo App</h1>
+        <h1 className={styles.heading}>Pomodoro Todo App</h1>
         <p className={styles.description}>This is a todo app made by Hemanth Chowdary</p>
         
     </main>

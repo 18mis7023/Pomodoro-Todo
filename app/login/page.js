@@ -3,6 +3,16 @@ import auth0 from 'auth0-js';
 import { useState } from 'react';
 import { redirect } from 'next/navigation';
 
+import {
+  Button,
+  CheckBox,
+  Form,
+  FormField,
+  RadioButtonGroup,
+  Select,
+  TextInput,
+  Box
+} from "grommet";
 
 const auth0Client = new auth0.WebAuth({
   domain: 'dev-hemanthchowdary.us.auth0.com',
@@ -40,11 +50,15 @@ const page = () => {
 
   
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="email" name="email" placeholder="Email" value={email} onChange={handleEmailChange} />
-      <input type="password" name="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-      <button type="submit">Log in</button>
-    </form>
+    <Form className='login-form' onSubmit={({ value }) => {}}>
+      <FormField name="name" htmlFor="textinput-id" label="EMAIL">
+        <TextInput id="textinput-id" name="name" />
+      </FormField>
+      <Box direction="row" gap="medium">
+        <Button type="submit" primary label="Submit" />
+        <Button type="reset" label="Reset" />
+      </Box>
+    </Form>
   );
 };
 export default page;
